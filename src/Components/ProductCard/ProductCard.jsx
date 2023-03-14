@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-1 p-8 rounded-lg bg-rose-50">
+    <div className="flex flex-col items-center justify-center gap-1 p-2 md:p-4 lg:p-8 rounded-lg bg-rose-50">
       <div className="w-full h-60">
         <img
           src={`/images/${item.image}`}
@@ -16,9 +16,9 @@ const ProductCard = ({ item }) => {
       <h2 className="text-xl text-red-400 font-medium">{item.price} </h2>
       <Link
         to={`/products/${item.url}`}
-        className="rounded-lg px-2 py-1 w-1/2 md:w-full text-center text-white text-lg bg-red-400 font-medium"
-        item={item}
-        target={"_top"}
+        className="rounded-lg px-2 py-1 md:w-full text-center text-white md:text-lg bg-red-400 font-medium"
+              item={item}
+              target={"_top"}
       >
         Shop Now{" "}
       </Link>
